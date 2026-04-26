@@ -126,8 +126,12 @@ body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:var(--text);}
 .ready-badge{display:inline-block;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;margin-left:8px;}
 
 .pbtn{position:fixed;bottom:28px;right:28px;background:var(--orange);color:#fff;border:none;border-radius:50px;padding:13px 26px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(232,103,42,.4);font-family:'Noto Sans KR',sans-serif;z-index:999;}
+br.mob-only { display: none; }
 
 @media (max-width: 640px) {
+  /* 모바일 전용 줄바꿈 */
+  br.mob-only { display: initial; }
+
   /* 공통 패딩 */
   .page { padding: 28px 18px; }
 
@@ -137,9 +141,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:var(--text);}
   .cover-card { padding: 20px 18px; }
   .cover-bottom { padding: 14px 20px; flex-direction: column; gap: 4px; text-align: center; }
 
-  /* 소개 경력 카드 */
-  .cr { grid-template-columns: 80px 1fr; }
-  .cl { font-size: 11px; padding: 10px; }
+  /* 소개 경력 카드 — 세로 스택 */
+  .cr { grid-template-columns: 1fr; }
+  .cl { font-size: 12px; padding: 8px 12px; }
+  .cv { font-size: 12px; padding: 10px 12px; }
 
   /* 흐름도 — 세로 배치 */
   .flow { flex-direction: column; }
@@ -186,7 +191,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:var(--text);}
     <div class="cover-sub">미국 유학원 · 교육기관 전용 화이트라벨 SaaS</div>
     <div class="cover-card">
       <p>
-        링크 하나로 시작되는 유학원 전용 AI 정밀진단 시스템.<br>
+        링크 하나로 시작되는<br>유학원 전용 AI 정밀진단 시스템.<br>
         학생·부모 진단부터 결과지 자동 생성,<br>
         유학원 브랜드 맞춤 결과지, 관리 대시보드까지.<br><br>
         유학원 이름으로 운영되는<br>
@@ -221,7 +226,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:var(--text);}
   <div class="page-hd"><span class="pnum">01</span><h2>킹클코치 소개</h2></div>
   <p class="bt">킹클코치는 22년 경력의 코칭 전문가 이지현이 운영하는 AI 코칭 컨설팅 브랜드입니다. 풍부한 현장 경험과 최신 AI 기술을 결합하여 교육기관 전용 진단 자동화 시스템을 설계·운영합니다.</p>
   <div class="creds">
-    <div class="cr"><div class="cl">📅 22년 경력</div><div class="cv">청소년·성인 코칭 현장 경력 · 누적 20만 회 코칭</div></div>
+    <div class="cr"><div class="cl">📅 22년 경력</div><div class="cv">청소년·성인 코칭 현장 경력<br class="mob-only"> · 누적 20만 회 코칭</div></div>
     <div class="cr"><div class="cl">📚 13권 출간</div><div class="cv">생각디톡스·진로디톡스·학습디톡스 등 자녀교육·자기계발 분야 저서 출간</div></div>
     <div class="cr"><div class="cl">📺 방송 출연</div><div class="cv">MBC 공부가 머니 자기주도학습 전문가 패널 출연<br>채널A 티처스2 성적을 부탁해 대치동 입시코디네이터 출연</div></div>
     <div class="cr"><div class="cl">🏫 강의</div><div class="cv">서울·경기도교육청 공식 강의 · 800명 대기 마감<br>초중고 120개교 자기주도학습 기획·강의<br>초중 1,000개 기관 진로프로그램 기획개발·교사연수</div></div>
