@@ -126,6 +126,52 @@ body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:var(--text);}
 .ready-badge{display:inline-block;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;margin-left:8px;}
 
 .pbtn{position:fixed;bottom:28px;right:28px;background:var(--orange);color:#fff;border:none;border-radius:50px;padding:13px 26px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(232,103,42,.4);font-family:'Noto Sans KR',sans-serif;z-index:999;}
+
+@media (max-width: 640px) {
+  /* 공통 패딩 */
+  .page { padding: 28px 18px; }
+
+  /* 표지 */
+  .cover-body { padding: 40px 20px; }
+  .cover-title { font-size: 26px; }
+  .cover-card { padding: 20px 18px; }
+  .cover-bottom { padding: 14px 20px; flex-direction: column; gap: 4px; text-align: center; }
+
+  /* 소개 경력 카드 */
+  .cr { grid-template-columns: 80px 1fr; }
+  .cl { font-size: 11px; padding: 10px; }
+
+  /* 흐름도 — 세로 배치 */
+  .flow { flex-direction: column; }
+  .flow-step:not(:last-child)::after { display: none; }
+  .flow > div:not(.flow-step) {
+    width: 100% !important;
+    height: 28px;
+    padding-top: 0 !important;
+    flex-shrink: unset !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: rotate(90deg);
+  }
+
+  /* 요금 카드 — 1열 */
+  .fee-cards { grid-template-columns: 1fr; }
+
+  /* 도입 절차 — Step번호 + (타이틀/설명) 2열 */
+  .step {
+    grid-template-columns: 66px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .snum { grid-row: 1 / 3; }
+  .stit { grid-column: 2; padding: 12px 14px 6px; display: block; }
+  .sdesc { grid-column: 2; padding: 6px 14px 12px; display: block; }
+
+  /* 문의 박스 */
+  .cbox { padding: 20px 16px; }
+  .crow { grid-template-columns: 64px 1fr; }
+  .cval { font-size: 13px; word-break: break-all; }
+}
 </style>
 </head>
 <body>
